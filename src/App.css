@@ -1,0 +1,41 @@
+/* Header styling */
+header {
+  background-color: white; /* Change background to white */
+  color: #333; /* Dark text for better contrast */
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd; /* Optional: adds a subtle border under the header */
+}
+
+/* Navigation list styling */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Align the items in a row */
+  justify-content: center;
+  margin: 0;
+}
+
+/* Styling for each list item */
+nav ul li {
+  margin: 0 20px; /* Increased space between items */
+}
+
+/* Styling for links */
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Dark color for text */
+  font-size: 18px;
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+  color: #0073e6; /* Blue color on hover */
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}

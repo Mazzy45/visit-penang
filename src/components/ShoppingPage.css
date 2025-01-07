@@ -1,0 +1,179 @@
+/* Apply Playfair Display for Headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    color: #292929;  /* Dark grey for elegance */
+}
+
+/* Apply Poppins for Descriptions */
+p, .description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #555;  /* Slightly lighter for readability */
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.mall-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    gap: 20px;
+    justify-content: center;
+}
+
+.mall-item {
+    display: flex;
+    margin: 10px;
+}
+
+.mall-card {
+    background-color: #D7D0C7;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.mall-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mall-card p {
+    margin: 15px 0 10px;
+}
+
+/* Styles for the Image Slider */
+.image-slider {
+    max-width: 900px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #000; /* Ensure background color is consistent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.image-slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay to blur the excess area */
+/*filter: blur(2px);
+z-index: 1; /* Behind the image */
+/*}*/
+
+.image-slider img {
+    width: auto;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out; /* Smooth transition for image sliding */
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px 12px;
+    z-index: 2;
+}
+
+.prev-btn {
+    left: 5px;  /* Adjust for left positioning */
+}
+
+.next-btn {
+    right: 5px;  /* Adjust for right positioning */
+}
+
+.mall-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.container {
+    width: 100%; /* Adjust according to your layout */
+    overflow: hidden;  /* Hide any part of the image that overflows */
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    /* Adjust the layout for mobile screens */
+    .container {
+        padding: 10px;
+    }
+
+    .mall-list {
+        flex-direction: column;  /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .mall-item {
+        width: 100%;  /* Make sure each item takes full width */
+        max-width: none;  /* Remove max-width restriction for smaller devices */
+    }
+
+    .mall-card {
+        width: 100%;  /* Make cards take full width in mobile */
+        margin: 5px;
+        padding: 10px;
+    }
+
+    /* Adjust text and heading sizes */
+    h1, h2, h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .mall-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    /* Style adjustments for image slider */
+    .image-slider {
+        width: 100%;  /* Full width for the image slider */
+        height: 250px;  /* Adjust height to fit better */
+    }
+
+    .image-slider img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Mobile button adjustments */
+    .prev-btn, .next-btn {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+
+    .details-btn {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 16px; /* Smaller padding for better fit */
+        position: absolute;  /* Ensure button stays inside the card */
+        top: 10px;
+        right: 10px;  /* Button stays at the top-right corner */
+    }
+}

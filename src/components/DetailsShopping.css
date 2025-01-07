@@ -1,0 +1,209 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #256940;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Button Text */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.details-btn {
+    background-color: #cda781; /*#53351C*/
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;  /* Ensure button stays clickable */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for 3D effect */
+    transition: transform 0.2s, box-shadow 0.2s;
+    float: right;
+}
+
+.details-btn:hover {
+    background-color: #53351C; /*#cda781*/
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    padding: 20px;
+    z-index: 9999;
+    /*right: 0;
+    bottom: 0;*/
+}
+
+.modal img {
+    width: auto;  /* Keeps the original width */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures it doesn't overflow the container */
+    display: block;  /* Prevents extra spacing below the image */
+    margin: 0 auto;  /* Centers the image */
+    object-fit: cover;
+}
+
+.modal-content {
+    background-color: #fff !important;
+    opacity: 4;  /* Ensure no transparency */
+    width: 70%; /* Set a more flexible width */
+    max-width: 600px; /* Max width to prevent modal from becoming too wide */
+    max-height: 80vh; /* Allow content to fill up to 80% of the viewport height */
+    padding: 30px;
+    border-radius: 15px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade-in 0.3s ease-out; /* Fade-in effect for the modal */
+    /*height: auto;*/
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+    color: #D7D0C7;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it stays on top */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Slight background blur */
+    background: rgba(0, 0, 0, 0.5); /* Darker background */
+    z-index: 9998;  /* Slightly lower than modal */
+}
+
+.show-overlay {
+    display: block; /* Show when needed */
+}
+
+.gallery img {
+    width: auto;  /* Keeps the original width */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures it doesn't overflow the container */
+    display: block;  /* Prevents extra spacing below the image */
+    margin: 0 auto;  /* Centers the image */
+    /*width: 100%;*/
+    max-height: 300px;
+    object-fit: cover;
+    /*margin: 10px 0;*/
+}
+
+/* Tab Styles */
+.tab {
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.tab button {
+    background-color: #f1f1f1;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.tab button.active {
+    background-color: #256940;
+    color: white;
+}
+
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    z-index: 9999;
+}
+
+/* For mobile screens */
+@media screen and (max-width: 600px) {
+    /* Adjust the layout for mobile screens */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .details-btn {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 16px; /* Smaller padding for better fit */
+        position: absolute;  /* Adjust button positioning */
+        top: 10px;
+        right: 10px;  /* Align to top-right */
+        z-index: 10000;  /* Ensure it's above content */
+    }
+
+    /* Adjust modal content and overlay for mobile */
+    .modal-content {
+        width: 90%; /* Ensure modal fits well on smaller screens */
+        max-width: 500px; /* Limit the maximum width */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .modal img {
+        width: 100%; /* Ensure image fits within modal */
+    }
+
+    .overlay {
+        backdrop-filter: blur(4px); /* Slightly reduced blur for mobile */
+    }
+
+    .gallery img {
+        max-height: 200px; /* Smaller images for mobile */
+    }
+
+    /* Stack tab buttons vertically on mobile */
+    .tab {
+        display: block;
+        text-align: center;
+    }
+
+    .tab button {
+        width: 100%; /* Full width buttons */
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .tab button.active {
+        background-color: #256940;
+        color: white;
+    }
+}

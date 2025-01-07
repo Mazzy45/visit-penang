@@ -1,0 +1,124 @@
+/* General Styles */
+.details-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Ensure consistent font */
+    font-size: 18px; /* Unified base font size for consistency */
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Title Styling */
+h1.title {
+    font-size: 2.5em; /* Larger title */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Description Styling */
+.description {
+    font-size: 18px; /* Ensure same font size as other sections */
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Info List Styling */
+.info-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.info-list li {
+    font-size: 18px; /* Ensure same font size for ticket info, operating hours, etc. */
+    margin: 8px 0;
+}
+
+.info-list li span {
+    font-weight: bold;
+}
+
+/* Links Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+/* Fixed size for all images */
+.slider-image, .video-container {
+    width: 80%; /* Limit the width to 80% of the container */
+    height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styling for buttons to keep them in place and centered */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for smoother look */
+    z-index: 1;
+}
+
+.slider-button:nth-of-type(1) {
+    left: 10px;
+}
+
+.slider-button:nth-of-type(2) {
+    right: 10px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .details-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .slider-button {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .description,
+    .info-list li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-button {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .description,
+    .info-list li {
+        font-size: 14px;
+    }
+}
