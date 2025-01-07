@@ -1,91 +1,24 @@
-body {
+.details-page {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-}
-
-.hotels-component {
-    text-align: center;
-}
-
-.search-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
-    background-color: #007bff;
-    color: white;
-    position: relative;
 }
 
-.date-group,
-.guest-room,
-.input-group {
-    display: flex;
-    gap: 10px;
+.details-page h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.search-bar input,
-.search-bar select,
-.search-bar button {
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
+.details-page p {
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-.search-bar input,
-.search-bar select {
-    width: 250px;
+.details-page a {
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
 }
 
-.input-group input,
-.input-group select,
-.date-group input,
-.guest-room input {
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-}
-
-.guest-room input {
-    width: 50px;
-}
-
-.search-bar button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #218838;
-}
-
-.guest-room label {
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.date-picker-overlay {
-    position: absolute;
-    top: 40px;
-    z-index: 100;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-    .search-bar {
-        flex-direction: column;
-    }
+.details-page a:hover {
+    text-decoration: underline;
 }

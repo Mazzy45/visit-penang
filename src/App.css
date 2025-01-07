@@ -1,41 +1,50 @@
-/* Header styling */
-header {
-  background-color: white; /* Change background to white */
-  color: #333; /* Dark text for better contrast */
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd; /* Optional: adds a subtle border under the header */
-}
-
-/* Navigation list styling */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex; /* Align the items in a row */
-  justify-content: center;
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Styling for each list item */
-nav ul li {
-  margin: 0 20px; /* Increased space between items */
+header {
+  background-color: #333;
+  padding: 10px;
+  color: white;
 }
 
-/* Styling for links */
-nav ul li a {
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
   text-decoration: none;
-  color: #333; /* Dark color for text */
   font-size: 18px;
 }
 
-/* Hover effect for links */
-nav ul li a:hover {
-  color: #0073e6; /* Blue color on hover */
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 
-/* Footer styling */
 footer {
-  text-align: center;
-  padding: 10px;
   background-color: #333;
   color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

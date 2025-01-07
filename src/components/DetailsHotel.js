@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './DetailsHotel.css';
 
 const DetailsHotel = () => {
     const { hotelId } = useParams();
+    const [hotel, setHotel] = useState(null);
+
+    useEffect(() => {
+        // Example API call to fetch hotel details based on hotelId
+        fetch(`https://api.example.com/hotels/${hotelId}`)
+            .then(response => response.json())
+            .then(data => setHotel(data))
+            .catch(error => console.error('Error fetching hotel data:', error));
+    }, [hotelId]);
+
+    if (!hotel) return <p>Loading...</p>;
 
     return (
         <div className="details-page">
-            <h1>Hotel Details for ID: {hotelId}</h1>
-            <p>Hotel Name: Sample Hotel</p>
-            <p>Location: Sample Location</p>
-            <p>Price: RM XXX per night</p>
-            <p>Rating: ⭐⭐⭐⭐</p>
-            <p>Description: A sample hotel description goes here.</p>
+            <h1>{hotel.name}</h1>
+            <p>Location: {hotel.location}</p>
+            <p>Price: RM {hotel.price} per night</p>
+            <p>Rating: {'⭐'.repeat(hotel.rating)}</p>
+            <p>Description: {hotel.description}</p>
             <Link to="/">Back to Hotels</Link>
         </div>
     );
