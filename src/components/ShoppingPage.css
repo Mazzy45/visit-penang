@@ -1,5 +1,12 @@
 /* Apply Playfair Display for Headings */
-h1, h2, h3 {
+h1{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    color: #292929;  /* Dark grey for elegance */
+}
+
+h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
     color: #292929;  /* Dark grey for elegance */

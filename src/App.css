@@ -1,50 +1,120 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
+/* App.css */
+
+/* Reset default styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  background-color: #333;
-  padding: 10px;
-  color: white;
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-header nav ul {
-  list-style-type: none;
+/* Header (Navigation Bar) */
+.navbar {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 2rem;
+}
+
+.navbar nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header nav ul li {
-  margin: 0 15px;
+/* Logo container */
+.navbar .logo img {
+  width: 150px; /* Adjust the width as needed */
+  height: auto;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+.nav-links {
+  list-style: none;
+  display: flex;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
+.nav-links li {
+  margin-left: 20px;
 }
 
+.nav-links li a {
+  color: black; /* Black text color for the links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.nav-links li a:hover {
+  color: gray; /* Change color on hover for better visual effect */
+}
+
+/* Main Content Area */
+main {
+  padding: 20px;
+}
+
+/* Footer Container */
 footer {
   background-color: #333;
   color: white;
-  padding: 15px;
+  padding: 20px 0;
   text-align: center;
+  font-size: 14px;
 }
 
-footer a {
-  color: white;
+/* Layout for the left and right sections */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* About Us and Contact Us style */
+.footer-left, .footer-right {
+  width: 45%;
+}
+
+.footer-left p, .footer-right p {
+  margin: 0;
+}
+
+/* Bottom section for copyright */
+.footer-bottom {
+  margin-top: 10px;
+}
+
+/* Optional: Styling for links */
+.footer-left a, .footer-right a {
+  color: #f1f1f1;
   text-decoration: none;
-  margin: 0 10px;
+}
+.footer-left a:hover, .footer-right a:hover {
+  text-decoration: underline;
 }
 
-footer a:hover {
-  text-decoration: underline;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
 }

@@ -69,22 +69,6 @@ const malls = [
     },
     {
         id: 4,
-        name: "Straits Quay Marina Mall",
-        images: [
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/14/e0/7a/caption.jpg?w=1200&h=-1&s=1",
-            "https://www.urtrips.com/wp-content/uploads/2023/02/Straits-Quay-Marina-Mall-Penang3.png",
-            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM8yjDkw8xw9XbSr1H8Y7KINRJFHBZ5shtW-aKoP_7ShlfppCx3bkij2KZMmxwdayIem2Ir1kPLEW4E36_yf1xm583DsGJH5Yq0msYjCBJ3xrIRuIseoj_g1KTHqD7gYd17BozKrqRbFQ/s1600/The+Straits+Quay+11.jpg"
-        ],
-        description: "Straits Quay Marina Mall is Penang’s first and only seafront retail marina, blending shopping with stunning ocean views. Opened in 2010, the mall is home to specialty stores, boutiques, and waterfront cafes. Visitors can stroll along the marina, enjoy live music at the central plaza, or embark on a sunset cruise. The area is also known for festivals and community events, making it a vibrant destination all year round.",
-        hours: "10 AM - 10 PM",
-        address: "Jalan Seri Tanjung Pinang 10470 Tanjong Tokong, Penang Malaysia",
-        gallery: [
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/78/1a/41/caption.jpg?w=1100&h=600&s=1",
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/97/62/fa/img-20200106-194132-largejpg.jpg?w=700&h=400&s=1"
-        ],
-    },
-    {
-        id: 5,
         name: "1st Avenue Mall",
         images: [
             "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/1st_Avenue_in_George_Town%2C_Penang_2023.jpg/1200px-1st_Avenue_in_George_Town%2C_Penang_2023.jpg",
@@ -105,38 +89,7 @@ const malls = [
         ],
     },
     {
-        id: 6,
-        name: "Prangin Mall",
-        images: [
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/4a/fc/5c/prangin-mall.jpg?w=1200&h=-1&s=1",
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/65/88/31/travel-photos.jpg?w=1400&h=800&s=1",
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/85/69/f2/caption.jpg?w=1400&h=800&s=1"
-        ],
-        description: "Prangin Mall is a long-standing shopping center known for its affordability and variety. Opened in 2001, it’s a hub for electronics, local goods, and fashion finds. Visitors often frequent the mall for its budget-friendly gadgets, clothing, and beauty products. Located near Komtar, it’s a popular stop for those exploring Georgetown and looking for bargains.",
-        hours: "10 AM - 10 PM",
-        address: "No 33, Jalan Dr Lim Chwee Leong, George Town, 10100 George Town, Pulau Pinang",
-        gallery: [
-            "https://media-cdn.tripadvisor.com/media/photo-s/0a/0d/ed/05/prangin-mall.jpg",
-            "https://media.penang360.my/file/penang360/shopping/jpg-prangin-mall-10.jpg"
-        ],
-    },
-    {
-        id: 7,
-        name: "Design Village Outlet Mall",
-        images: [
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/18/2c/f2/photo1jpg.jpg?w=1800&h=-1&s=1",
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/be/27/70/one-of-the-outlets.jpg?w=1800&h=-1&s=1",
-            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/08/82/ab/photo2jpg.jpg?w=1800&h=1000&s=1"
-        ],
-        description: "As Penang’s largest outlet mall, Design Village Outlet Mall offers incredible discounts on top global brands. Opened in 2016, this open-air mall in Batu Kawan features Nike, Guess, and Kate Spade outlets. It’s a must-visit for fashion enthusiasts and bargain hunters, with savings of up to 70% year-round. Its spacious layout and greenery make for a pleasant and relaxing shopping experience.",
-        hours: "11 AM - 10 PM",
-        address: "733, Jalan Cassia Barat 2, Bandar Cassia, 14110 Simpang Ampat, Pulau Pinang",
-        gallery: [
-            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicvFS8UcF0vIwlHGeC3Jb3zTShGz11KHi6H4DACmOle5wf2phQ5kpAuUkQrDFQH8zjDvYDMX6LxIEMqplcaNZCWzL2eAeFe0odyspem_mr4gkG-1XS1HglWEG-eoWOmvP5F-3M77f1hMBT/s640/maps_2-1024x720.jpg"
-        ],
-    },
-    {
-        id: 8,
+        id: 5,
         name: "Sunway Carnival Mall",
         images: [
             "https://www.sunwaycarnival.com/static/Sunway-Carnival-Mall-1019-SP-copy-1684394749386/w768.jpg",
@@ -154,40 +107,6 @@ const malls = [
             "https://www.sunwaycarnival.com/static/shops/595971614d85965d4e9f70cdf6c7350a/w768.jpeg"
         ],
     },
-    {
-        id: 9,
-        name: "Sunshine Central Mall",
-        images: [
-            "https://apicms.thestar.com.my/uploads/images/2023/09/23/2299551.webp",
-            "https://img1.penangpropertytalk.com/wp-content/uploads/2017/09/Entrance.jpg",
-            "https://lh3.googleusercontent.com/p/AF1QipMHxCwPg-saeMqLQWEXih945puEVwEXt4usEEY=s1360-w1360-h1020"
-        ],
-        description: "Sunshine Central Mall is an emerging lifestyle and retail hub in Bayan Lepas. As part of the Sunshine Group, it aims to be a one-stop destination for shopping, entertainment, and dining. While the mall is still under development, it promises modern design, family-friendly activities, and a broad range of retail outlets upon completion.",
-        hours: "10 AM - 10 PM",
-        address: "Sunshine Mall @ Sunshine Central, 8, Jln Thean Tek, Farlim, 11500 Air Itam, Penang",
-        gallery: [
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg4Mn3_qmvEAvgJdSCGP360YGToNSIhIL6nrTbhvcVKgA-BPFapPDXRrJglnmgrhCvp38&usqp=CAU",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoh6r5OqEc7JX1eKVmvTAZEgKTrpswtDmZs-GeM0zHjIbMtdfHEryD16tDXw7aGRf6534&usqp=CAU",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNS1uu8d8AjMKGAsqNPI-wPDvayiA2BM35Cg&s"
-        ],
-    },
-    {
-        id: 10,
-        name: "Aeon Mall Bukit Mertajam",
-        images: [
-            "https://mypenang.gov.my/uploads/directory/1097/cover/AEON-BM.jpeg",
-            "https://www.lingzie.com/wp-content/uploads/2014/06/P1070161.jpg",
-            "https://fastly.4sqi.net/img/general/600x600/22548149_yu_l5YJKy-B6DqDthhXoO_eChGcrZzDajPzHTm6kFKw.jpg"
-        ],
-        description: "Aeon Mall Bukit Mertajam stands as one of the busiest malls in Seberang Perai, attracting shoppers from across the region. Opened in 2014, it features a wide array of stores, including Aeon’s department store, supermarkets, and specialty shops. The mall regularly hosts seasonal events and offers numerous dining options, making it a popular weekend spot for families and visitors.",
-        hours: "10 AM - 10 PM",
-        address: "Lot 30908, Jalan Rozhan, Alma, 14000 Bukit Mertajam, Pulau Pinang",
-        gallery: [
-            "https://cdn.aeonmallmy.com/web-cms/tenant-listings/SjW4e5DIQD3zboarSKWAi7jX2OeUjpLtDblXrcZ2.jpg?token=8lGnSuGfopkY7Gxr8YEZtQ&expires=1736095332",
-            "https://cdn.aeonmallmy.com/web-cms/tenant-listings/JFVyLRG0DxATZuN8ZKT9nat52Wfv7q1aqnpCBJQb.jpg?token=swlgvIjegUxlSiYkSEOXJw&expires=1736095273",
-            "https://cdn.aeonmallmy.com/web-cms/tenant-listings/Wb398j3IaFkskseKKsJF2BKnz2uJANM32rvrmBMt.jpg?token=HqskipWroPJQoVL57SS-PQ&expires=1736096838"
-        ],
-    }
 ];
 
 const ShoppingMallList = ({ onDetails }) => {
@@ -268,7 +187,7 @@ const ShoppingPage = () => {
 
     return (
         <div>
-            <h1>Shopping Markets</h1>
+            <h1>Top 5 Shopping Malls</h1>
             <ShoppingMallList onDetails={handleDetails} />
             {selectedMall && (
                 <DetailsShopping mall={selectedMall} onClose={closeModal} />
