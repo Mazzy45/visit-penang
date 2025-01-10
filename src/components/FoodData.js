@@ -134,7 +134,7 @@ const foodData = [
         images:
             [
                 "/images/Roti_canai_2.png",
-                "/images/Roti_canai_3.png",
+                "/images/Roti_canai_2.png",
                 "/images/Roti_canai_4.png",
                 "/images/Roti_canai_5.png"
 
@@ -332,7 +332,7 @@ const foodData = [
         images:[
             "/images/Mooncake_2.png",
             "/images/Mooncake_3.png",
-            "/images/Mooncake_4.png",
+            "/images/Mooncake_3.png",
             "/images/Mooncake_5.png",
             "/images/Mooncake_6.png"
 
