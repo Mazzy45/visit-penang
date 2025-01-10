@@ -4,7 +4,7 @@ import './HotelPage.css';
 
 const HotelPage = () => {
     const [search, setSearch] = useState('');
-    const [hotels, setHotels] = useState([
+    const [hotels] = useState([
         { id: 1, name: 'Sample Hotel', location: 'Sample Location' },
         { id: 2, name: 'Luxury Hotel', location: 'Luxury Location' },
         { id: 3, name: 'Budget Inn', location: 'Budget Location' },
