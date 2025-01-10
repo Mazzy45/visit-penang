@@ -1,22 +1,41 @@
-// HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css'; // Custom stylesheet for homepage
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="homepage-container">
             {/* Main Banner */}
             <section className="main-banner">
-                <h1>Welcome to Visit Penang</h1>
-                <p>Discover the beauty of Penang, Malaysia</p>
-                <img src="path-to-banner-image.jpg" alt="Penang Landscape" />
+                <div className="banner-content">
+                    <h1>Discover Penang True Colors</h1>
+                </div>
+                <div className="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/ohwZM54vHMA"
+                        frameBorder="0"
+                        /*allowFullScreen*/
+                        title="YouTube Video: Penang Tourist Spot"
+                    ></iframe>
+                </div>
             </section>
+
 
             {/* Introduction Section */}
             <section className="introduction">
                 <h2>About Penang</h2>
-                <p>Penang, known as the "Pearl of the Orient", is a must-visit destination for its rich culture, amazing food, and beautiful landscapes. Whether you want to explore nature, indulge in local delicacies, or enjoy family-friendly activities, Penang has something for everyone.</p>
+                <div className="text-box">
+                    <p>Penang, also known as the "Pearl of the Orient", is a charming island that has something for
+                        everyone. Famous for its delicious food, Penang offers a mix of flavors from various cultures –
+                        Chinese, Malay, Indian, and more. Beyond food, Penang is full of history, with places like
+                        George Town, a UNESCO World Heritage Site, showcasing beautiful old buildings and vibrant street
+                        art.
+
+                        Nature lovers can explore lush hills, stunning beaches, and tranquil parks, while those looking
+                        for adventure can try hiking, water sports, and other outdoor activities. Whether you’re here to
+                        enjoy the food, relax, or discover the culture, Penang’s unique charm will make you feel right
+                        at home.</p>
+                </div>
             </section>
 
             {/* Featured Sections */}

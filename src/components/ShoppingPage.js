@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ShoppingPage.css';
-import DetailsShopping from './DetailsShopping';
+import DetailShopping from './DetailShopping';
 
 const malls = [
     {
@@ -190,7 +190,7 @@ const ShoppingPage = () => {
             <h1>Top 5 Shopping Malls</h1>
             <ShoppingMallList onDetails={handleDetails} />
             {selectedMall && (
-                <DetailsShopping mall={selectedMall} onClose={closeModal} />
+                <DetailShopping mall={selectedMall} onClose={closeModal} />
             )}
         </div>
     );

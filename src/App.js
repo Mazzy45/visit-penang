@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import './App.css'; // Import your CSS styles
 
 // Import components
@@ -8,20 +8,33 @@ import HotelPage from './components/HotelPage';
 import FoodPage from './components/FoodPage';
 import ShoppingPage from './components/ShoppingPage';
 import SpotsPage from './components/SpotsPage';
-import DetailsHotel from './components/DetailsHotel';  // Hotel detail page
-import DetailsFood from './components/DetailsFood';    // Food detail page
-import DetailsShopping from './components/DetailsShopping';  // Shopping detail page
-import DetailsSpots from './components/DetailsSpots';  // Tourist Spots detail page
+import DetailHotel from './components/DetailHotel';  // Hotel detail page
+import DetailFood from './components/DetailFood';    // Food detail page
+import DetailShopping from './components/DetailShopping';  // Shopping detail page
+import DetailSpots from './components/DetailSpots';  // Tourist Spots detail page
+import foodData from './components/FoodData';
+
+// ScrollToTop Component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
       <Router>
+        <ScrollToTop />
         <div>
           {/* Navigation Bar */}
           <header className="navbar">
             <nav>
               <div className="logo">
-                <img src={`${process.env.PUBLIC_URL}/logo-visit-penang.png`} alt="Visit Penang Logo"/>
+                <img src={`${process.env.PUBLIC_URL}/logo-visit-penang.png`} alt="Visit Penang Logo" />
               </div>
               <ul className="nav-links">
                 <li><Link to="/">Home</Link></li>
@@ -33,37 +46,50 @@ function App() {
             </nav>
           </header>
 
-
           {/* Routes for different pages */}
           <Routes>
-            {/* HomePage */}
-            <Route path="/" element={<HomePage/>}/>
-
-            {/* Detailed Pages */}
-            <Route path="/hotels" element={<HotelPage/>}/>
-            <Route path="/food" element={<FoodPage/>}/>
-            <Route path="/shopping" element={<ShoppingPage/>}/>
-            <Route path="/tourist-spots" element={<SpotsPage/>}/>
-
-            {/* Detail Pages */}
-            <Route path="/hotels/:hotelId" element={<DetailsHotel/>}/> {/* Dynamic route for Hotel */}
-            <Route path="/food/:foodId" element={<DetailsFood/>}/> {/* Dynamic route for Food */}
-            <Route path="/shopping/:mallId" element={<DetailsShopping/>}/> {/* Dynamic route for Shopping */}
-            <Route path="/spots/:id" element={<DetailsSpots/>}/> {/* Dynamic route for Tourist Spots */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/hotels" element={<HotelPage />} />
+            <Route path="/food" element={<FoodPage items={foodData} />} />
+            <Route path="/shopping" element={<ShoppingPage />} />
+            <Route path="/tourist-spots" element={<SpotsPage />} />
+            <Route path="/hotels/:hotelId" element={<DetailHotel />} />
+            <Route path="/food/:id" element={<DetailFood items={foodData} />} />
+            <Route path="/shopping/:mallId" element={<DetailShopping />} />
+            <Route path="/spots/:id" element={<DetailSpots />} />
+            <Route path="*" element={<HomePage />} /> {/* Catch-all route */}
           </Routes>
 
           {/* Footer */}
           <footer>
             <div className="footer-container">
               <div className="footer-left">
-                <p>About Us</p>
+                <h4>About Us</h4>
+                <p>At True Colours of Penang, we're passionate about showcasing the island’s vibrant culture, rich
+                  heritage, and unique experiences. As a global tourism company, we collaborate with both local and
+                  international partners to highlight Penang's multicultural identity and traditions. Our mission is to
+                  help travelers explore the island’s hidden gems—from its historic streets and stunning architecture to
+                  its natural beauty and delicious food scene.
+                  Whether you're seeking adventure, relaxation, or cultural discovery, True Colours of Penang is
+                  dedicated to providing unforgettable experiences and ensuring every visit leaves a lasting memory.</p>
               </div>
               <div className="footer-right">
-                <p>Contact Us</p>
+                <h4>Contact Us</h4>
+                <p><strong>True Colours of Penang</strong></p>
+                <p>Level 3, Heritage Square, Jalan Warisan</p>
+                <p>George Town, 10200 Penang, Malaysia</p>
+                <p><strong>Phone:</strong> +604 987 6543</p>
+                <p><strong>Fax:</strong> +604 987 1234</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@truecoloursofpenang.com">contact@truecoloursofpenang.com</a></p>
+                <p>
+                  <strong>Operation Hours:</strong><br />
+                  Mon - Fri: 9:00 AM - 5:00 PM<br />
+                  Sat & Sun: Closed
+                </p>
               </div>
             </div>
             <div className="footer-bottom">
-              <p>&copy; 2025 True Colors of Penang. All Rights Reserved.</p>
+              <p>&copy; 2025 True Colours of Penang. All Rights Reserved.</p>
             </div>
           </footer>
         </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import './DetailsHotel.css';
+import './DetailHotel.css';
 
-const DetailsHotel = () => {
+const DetailHotel = () => {
     const { hotelId } = useParams();
     const [hotel, setHotel] = useState(null);
 
@@ -28,4 +28,4 @@ const DetailsHotel = () => {
     );
 };
 
-export default DetailsHotel;
+export default DetailHotel;

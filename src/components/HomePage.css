@@ -1,77 +1,211 @@
-/* HomePage Specific Styles */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Banner */
 .main-banner {
-    background-color: #f8f8f8;
-    padding: 50px 20px;
+    position: relative;
+    color: white;
     text-align: center;
-}
-
-.main-banner h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.main-banner p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.main-banner img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+    padding: 80px 20px;
+    background-image: url('https://riderchris.com/wp-content/uploads/2023/05/Armenian-Street.jpg');
+    background-size: cover; /* Ensures the image covers the whole section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 500px; /* Adjust the height to your preference */
+    color: white; /* Ensures the text is visible against the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .introduction {
-    background-color: #f1f1f1;
-    padding: 40px 20px;
+    background-image: url('https://image-tc.galaxy.tf/wijpeg-do63415ljdih23u08o45mueze/george-town-penang-island.jpg?width=1920');
+    background-size: cover; /* Ensures the image covers the whole section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 500px; /* Adjust the height to your preference */
+    color: white; /* Ensures the text is visible against the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
+/* Box for text with background */
+.text-box {
+    background-color: rgba(220, 220, 230, 0.6); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 10px; /* Adds space inside the box */
+    border-radius: 20px; /* Rounded corners */
+    max-width: 70%; /* Limit the box width */
+    margin: 20px auto; /* Center the box and add some margin */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3); /* Adds shadow to the box */
+    text-align: center; /* Centers the text inside the box */
+}
+
+.main-banner {
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Set a limit if needed */
+    aspect-ratio: 16 / 9; /* Forces 16:9 ratio */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-container iframe {
+    width: 100%; /* Responsive width */
+    height: 315px; /* Keep the aspect ratio of 16:9 */
+    border: none; /* Optional to remove the border */
+}
+
+.main-banner h1 {
+    font-size: 3rem;
+    margin-top: -60px;
+    margin-bottom: 5px;
+    color: rgb(255, 249, 77);
+    text-shadow:
+            2px 2px 4px rgba(0, 0, 0, 0.32), /* Top-left shadow */
+            -2px -2px 4px rgba(0, 0, 0, 0.32), /* Bottom-right shadow */
+            2px -2px 4px rgba(0, 0, 0, 0.32), /* Top-right shadow */
+            -2px 2px 4px rgba(0, 0, 0, 0.32); /* Bottom-left shadow */
+}
+
+.main-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Introduction Section */
+.introduction {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
 .introduction h2 {
-    font-size: 28px;
+    font-size: 2.5rem;
+    color: #000000;
     margin-bottom: 20px;
 }
 
 .introduction p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    color: #000000;
+    margin-bottom: 3px;
 }
 
+/* Featured Section */
 .featured {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 40px 20px;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
 }
 
 .featured-item {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #fff;
+    padding: 30px;
+    width: 250px;
     text-align: center;
-    width: 22%;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover {
+    transform: translateY(-10px);
 }
 
 .featured-item h3 {
-    font-size: 24px;
+    font-size: 1.8rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .featured-item p {
-    font-size: 16px;
+    font-size: 1rem;
+    color: #666;
     margin-bottom: 20px;
 }
 
 .explore-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
     text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .explore-btn:hover {
     background-color: #0056b3;
 }
+
+/* Hero section */
+.hero {
+    background-image: url('https://previews.123rf.com/images/keongdagreat/keongdagreat1801/keongdagreat180100058/94148023-penang-bridge-view-from-the-shore-of-george-town-malaysia.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Button styles */
+button {
+    padding: 15px 30px;
+    background-color: #FFB800; /* Elegant gold */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF9E00; /* Slightly darker gold */
+    transform: scale(1.05);
+}
+

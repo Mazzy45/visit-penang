@@ -1,7 +1,7 @@
 import React from 'react';
-import './DetailsShopping.css';
+import './DetailShopping.css';
 
-function DetailsShopping({ mall, onClose }) {
+function DetailShopping({ mall, onClose }) {
     return (
         <div className="modal-overlay" style={{display: mall ? 'block' : 'none'}}>
             <div className="modal-content">
@@ -25,4 +25,4 @@ function DetailsShopping({ mall, onClose }) {
     );
 }
 
-export default DetailsShopping;
+export default DetailShopping;

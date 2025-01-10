@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { topTouristSpots } from './TouristSpotsData';
-import './DetailsSpots.css';
+import './DetailSpots.css';
 
-const DetailsSpots = () => {
+const DetailSpots = () => {
     const { id } = useParams(); // Get the id from the route
     const touristSpot = topTouristSpots.find((spot) => spot.id === id);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -82,4 +82,4 @@ const DetailsSpots = () => {
     );
 };
 
-export default DetailsSpots;
+export default DetailSpots;

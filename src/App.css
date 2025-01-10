@@ -10,7 +10,7 @@
 /* Body styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   color: #333;
   line-height: 1.6;
 }
@@ -59,8 +59,8 @@ main {
 
 /* Footer Container */
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
@@ -70,31 +70,69 @@ footer {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 
-/* About Us and Contact Us style */
-.footer-left, .footer-right {
-  width: 45%;
+.footer-left,
+.footer-right {
+  flex: 1; /* Equal width for both sections */
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Add the divider style */
+.footer-container::before {
+  content: "";
+  width: 1px; /* Divider width */
+  background-color: #ffffff; /* Divider color */
+  align-self: stretch; /* Ensures it spans the height of the container */
+}
+.footer-left {
+  background-color: #ffffff; /* Background color for "About Us" section */
+  color: #fff; /* Text color */
+  padding: 20px; /* Add some padding for spacing */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.footer-right {
+  background-color: #ffffff; /* Background color for "Contact Us" section */
+  color: #000000; /* Text color */
+  padding: 20px; /* Add some padding for spacing */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.footer-left h4, .footer-right h4 {
+  color: #000000; /* Heading color for both sections */
+  text-align: justify;
 }
 
 .footer-left p, .footer-right p {
-  margin: 0;
+  color: #000000; /* Heading color for both sections */
 }
 
-/* Bottom section for copyright */
-.footer-bottom {
-  margin-top: 10px;
-}
-
-/* Optional: Styling for links */
-.footer-left a, .footer-right a {
-  color: #f1f1f1;
+.footer-right a {
+  color: #000000; /* Link color for email */
   text-decoration: none;
 }
-.footer-left a:hover, .footer-right a:hover {
-  text-decoration: underline;
+
+.footer-right a:hover {
+  color: #000000; /* Change color on hover for better interactivity */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0; /* Add padding to the copyright section */
+  font-size: 12px;
+  background-color: #ffffff; /* Add a slightly darker background to distinguish it */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow for depth */
+}
+
+.footer-bottom p {
+  color: #000000; /* Heading color for both sections */
 }
 
 /* Responsive Design */

@@ -1,19 +1,108 @@
-header {
-    background-color: #f7d9aa;
-    padding: 20px;
+/* FoodPage.css */
+.food-page {
     text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffd8b1;
+    min-height: 100vh;/* Ensures the background covers the entire viewport height */
 }
 
-#homepage-content .rectangle {
-    margin: 10px;
+/* Header Section */
+.food-header {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.47);
+}
+.food-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.food-header p {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Filter Buttons */
+.filter-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.filter-options button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.filter-options button:hover {
+    background-color: #0056b3;
+}
+
+/* Food Cards Section */
+.food-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Food Card */
+.food-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    text-align: left;
+}
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.food-card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+.food-card-content {
     padding: 15px;
-    background: #fff3e0;
-    text-align: center;
+}
+.food-card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Buttons inside the card */
+.food-card-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.food-card-buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-.rectangle img {
-    width: 100px;
-    height: 100px;
+.food-card-buttons .learn-more {
+    background-color: #28a745;
+    color: white;
+}
+.food-card-buttons .learn-more:hover {
+    background-color: #218838;
 }
