@@ -265,13 +265,13 @@ const foodData = [
     {
         category: "dessert",
         name: "Cendol",
-        image: "/images/cendol_1.png",
+        image: "/images/Cendol_1.png",
         images:[
-            "/images/cendol_2.png",
-            "/images/cendol_3.png",
-            "/images/cendol_4.png",
-            "/images/cendol_5.png",
-            "/images/cendol_6.png"
+            "/images/Cendol_2.png",
+            "/images/Cendol_3.png",
+            "/images/Cendol_4.png",
+            "/images/Cendol_5.png",
+            "/images/Cendol_6.png"
         ],
         description:
             "Cendol is a refreshing Southeast Asian dessert made with shaved ice, " +
