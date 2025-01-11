@@ -38,7 +38,7 @@ function FoodPage({ items }) {
                             <div className="food-card-buttons">
                                 <button
                                     className="learn-more"
-                                    onClick={() => (window.location.href = `/food/${item.name}`)}
+                                    onClick={() => (window.location.href = `/food/${encodeURIComponent(item.name)}`)}
                                 >
                                     Learn More
                                 </button>
