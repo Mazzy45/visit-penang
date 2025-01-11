@@ -28,6 +28,10 @@ body {
   align-items: center;
 }
 
+.navbar .logo {
+  margin-right: 40%;
+}
+
 /* Logo container */
 .navbar .logo img {
   width: 150px; /* Adjust the width as needed */
