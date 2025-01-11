@@ -1,24 +1,186 @@
-.details-page {
-    font-family: Arial, sans-serif;
+/* General Styles */
+.details-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    background-color: rgba(249, 249, 249, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.details-page h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+
+/* Title Styling */
+h1.title {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #34495e;
 }
 
-.details-page p {
+
+/* Description Styling */
+.description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #34495e;
+}
+
+
+/* Info List Styling */
+.info-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+
+.info-list li {
     font-size: 18px;
     margin: 10px 0;
+    color: #7f8c8d;
 }
 
-.details-page a {
-    font-size: 18px;
-    color: #007BFF;
+
+.info-list li strong {
+    color: #2c3e50;
+}
+
+
+/* Links Styling */
+.website-link a, .map-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.website-link a:hover, .map-link a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider-image {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Button Styles */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.prev-button {
+    left: 20px;
+}
+
+
+.next-button {
+    right: 20px;
+}
+
+
+.map-link-button {
+    background: none;
+    border: none;
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+
+.map-link-button:hover {
+    color: #2980b9;
     text-decoration: none;
 }
 
-.details-page a:hover {
-    text-decoration: underline;
+
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .slider-image {
+        height: 300px;
+    }
+
+
+    h1.title {
+        font-size: 2.2em;
+    }
+
+
+    .description, .info-list li {
+        font-size: 16px;
+    }
+
+
+    .slider-button {
+        font-size: 28px;
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .slider-image {
+        height: 200px;
+    }
+
+
+    h1.title {
+        font-size: 1.8em;
+    }
+
+
+    .description, .info-list li {
+        font-size: 14px;
+    }
+
+
+    .slider-button {
+        font-size: 20px;
+        padding: 6px;
+    }
 }

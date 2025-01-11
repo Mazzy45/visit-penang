@@ -17,7 +17,7 @@ body {
 
 /* Header (Navigation Bar) */
 .navbar {
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #A8E6CF, #F3E5AB);
   color: #000000;
   padding: 1rem 2rem;
 }
@@ -46,6 +46,10 @@ body {
 .nav-links li a {
   color: black; /* Black text color for the links */
   text-decoration: none; /* Remove underline from links */
+  display: inline-block;
+  text-align: center; /* Centers text if wrapped */
+  white-space: normal; /* Allows text wrapping */
+  line-height: 1.5;    /* Adjusts spacing between lines */
 }
 
 .nav-links li a:hover {
@@ -59,9 +63,9 @@ main {
 
 /* Footer Container */
 footer {
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #80bb72, #f3e5ab);
   color: #000000;
-  padding: 20px 0;
+  padding: 5px 0;
   text-align: center;
   font-size: 14px;
 }
@@ -69,35 +73,29 @@ footer {
 /* Layout for the left and right sections */
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  margin-bottom: 10px;
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 5px;
 }
 
 .footer-left,
 .footer-right {
+  margin-left: 60px;
   flex: 1; /* Equal width for both sections */
   max-width: 500px;
   padding: 20px;
   border-radius: 5px;
 }
 
-/* Add the divider style */
-.footer-container::before {
-  content: "";
-  width: 1px; /* Divider width */
-  background-color: #ffffff; /* Divider color */
-  align-self: stretch; /* Ensures it spans the height of the container */
-}
 .footer-left {
-  background-color: #ffffff; /* Background color for "About Us" section */
   color: #fff; /* Text color */
   padding: 20px; /* Add some padding for spacing */
   border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 .footer-right {
-  background-color: #ffffff; /* Background color for "Contact Us" section */
   color: #000000; /* Text color */
   padding: 20px; /* Add some padding for spacing */
   border-radius: 5px; /* Optional: Add rounded corners */
@@ -109,12 +107,19 @@ footer {
 }
 
 .footer-left p, .footer-right p {
+  font-size: 14px;
+  text-align: justify;
   color: #000000; /* Heading color for both sections */
 }
 
 .footer-right a {
   color: #000000; /* Link color for email */
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-right a:hover {
@@ -125,14 +130,22 @@ footer {
   text-align: center;
   margin-top: 20px;
   padding: 10px 0; /* Add padding to the copyright section */
-  font-size: 12px;
-  background-color: #ffffff; /* Add a slightly darker background to distinguish it */
+  font-size: 10px;
   border-radius: 5px; /* Optional: Add rounded corners */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow for depth */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.08); /* Optional: Add a subtle shadow for depth */
 }
 
 .footer-bottom p {
+  font-size: 15px;
   color: #000000; /* Heading color for both sections */
+}
+
+.footer-logo {
+  width: 80px; /* Adjust the logo size as needed */
+  height: auto;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%; /* Add some space between the logo and text */
 }
 
 /* Responsive Design */
@@ -140,6 +153,7 @@ footer {
   .nav-links {
     display: block;
     text-align: center;
+    align-items: center;
   }
 
   .nav-links li {
@@ -154,5 +168,56 @@ footer {
 
   .nav-links a {
     font-size: 14px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+/* Flex items */
+.about, .contact, .logo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.logo {
+  text-align: center;
+}
+
+/* Larger screen layout */
+@media (min-width: 769px) {
+  .footer-container {
+    flex-direction: row;
+  }
+}
+
+/* Smaller screen layout */
+@media (max-width: 768px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for about and contact */
+    gap: 1rem;
+  }
+
+  .footer-left {
+    max-width: 100%;
+    grid-column: 1 / 2; /* About Us takes the first column */
+  }
+
+  .footer-right {
+    grid-column: 2 / 3; /* Contact Us takes the second column */
+  }
+
+  .footer-logo {
+    grid-column: 1 / 3; /* Logo spans both columns below */
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 25rem;
+    margin-bottom: 20rem;
   }
 }

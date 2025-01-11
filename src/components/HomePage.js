@@ -40,24 +40,20 @@ const HomePage = () => {
 
             {/* Featured Sections */}
             <section className="featured">
-                <div className="featured-item">
+                <div className="featured-item hotels">
                     <h3>Hotels</h3>
-                    <p>Find the best hotels in Penang.</p>
                     <Link to="/hotels" className="explore-btn">Explore More</Link>
                 </div>
-                <div className="featured-item">
+                <div className="featured-item food">
                     <h3>Food</h3>
-                    <p>Indulge in Penang’s world-famous cuisine.</p>
                     <Link to="/food" className="explore-btn">Explore More</Link>
                 </div>
-                <div className="featured-item">
+                <div className="featured-item shopping">
                     <h3>Shopping</h3>
-                    <p>Shop for unique items and souvenirs.</p>
                     <Link to="/shopping" className="explore-btn">Explore More</Link>
                 </div>
-                <div className="featured-item">
+                <div className="featured-item tourist-spots">
                     <h3>Tourist Spots</h3>
-                    <p>Visit the top attractions in Penang.</p>
                     <Link to="/tourist-spots" className="explore-btn">Explore More</Link>
                 </div>
             </section>

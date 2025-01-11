@@ -53,8 +53,8 @@ function App() {
             <Route path="/food" element={<FoodPage items={foodData} />} />
             <Route path="/shopping" element={<ShoppingPage />} />
             <Route path="/tourist-spots" element={<SpotsPage />} />
-            <Route path="/hotels/:hotelId" element={<DetailHotel />} />
-            <Route path="/food/:id" element={<DetailFood items={foodData} />} />
+            <Route path="/hotels/:id" element={<DetailHotel/>}/>
+            <Route path="/food/:name" element={<DetailFood items={foodData} />} />
             <Route path="/shopping/:mallId" element={<DetailShopping />} />
             <Route path="/spots/:id" element={<DetailSpots />} />
             <Route path="*" element={<HomePage />} /> {/* Catch-all route */}
@@ -80,13 +80,14 @@ function App() {
                 <p>George Town, 10200 Penang, Malaysia</p>
                 <p><strong>Phone:</strong> +604 987 6543</p>
                 <p><strong>Fax:</strong> +604 987 1234</p>
-                <p><strong>Email:</strong> <a href="mailto:contact@truecoloursofpenang.com">contact@truecoloursofpenang.com</a></p>
-                <p>
-                  <strong>Operation Hours:</strong><br />
-                  Mon - Fri: 9:00 AM - 5:00 PM<br />
+                <p><strong>Email:</strong> <a
+                    href="mailto:contact@truecoloursofpenang.com">contact@truecoloursofpenang.com</a></p>
+                <p><strong>Operation Hours:</strong><br/>
+                  Mon - Fri: 9:00 AM - 5:00 PM<br/>
                   Sat & Sun: Closed
                 </p>
               </div>
+              <img src={`${process.env.PUBLIC_URL}/logo-penang.png`} alt="Penang Logo" className="footer-logo"/>
             </div>
             <div className="footer-bottom">
               <p>&copy; 2025 True Colours of Penang. All Rights Reserved.</p>

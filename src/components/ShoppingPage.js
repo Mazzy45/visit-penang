@@ -187,7 +187,8 @@ const ShoppingPage = () => {
 
     return (
         <div>
-            <h1>Top 5 Shopping Malls</h1>
+            <h1>Best Shopping Malls in Penang</h1>
+            <p>Explore Penang’s top malls, where shopping dreams come true.</p>
             <ShoppingMallList onDetails={handleDetails} />
             {selectedMall && (
                 <DetailShopping mall={selectedMall} onClose={closeModal} />

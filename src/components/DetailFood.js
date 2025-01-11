@@ -31,7 +31,7 @@ function DetailFood({ items }) {
                     {food.images.map((imgSrc, index) => (
                         <SwiperSlide key={index}>
                             <div className="slider-image">
-                                <img src={imgSrc} alt={`Slide ${index + 1}`} />
+                                <img src={`${process.env.PUBLIC_URL}/${imgSrc}`} alt={`Slide ${index + 1}`}/>
                             </div>
                         </SwiperSlide>
                     ))}
@@ -74,7 +74,7 @@ function DetailFood({ items }) {
                 <button className="more-choices" onClick={() => window.open(food.moreInfoLink, "_blank")}>
                     Other Locations
                 </button>
-                <button className="back" onClick={() => navigate("/")}>
+                <button className="back" onClick={() => navigate("/food")}>
                     Back to Food List
                 </button>
             </div>

@@ -1,63 +1,236 @@
-.hotels-page {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+/* General styles */
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure elements do not overflow */
+    background-image: linear-gradient(to bottom, rgb(243, 229, 171), rgb(128, 187, 114)),
+    url("https://www.google.com/imgres?q=penang&imgurl=https%3A%2F%2Fimage-tc.galaxy.tf%2Fwijpeg-9j3ux7drhby0iny1evej1e38j%2Fsunset-at-penang-bridge.jpg%3Fwidth%3D1920&imgrefurl=https%3A%2F%2Fwww.lexissuitespenang.com%2Fmedia%2Fblogs%2Fwhat-to-expect-and-prepare-when-you-travel-to-penang&docid=eNHnVvDun0fxLM&tbnid=GrcZRI1tKQGmnM&vet=12ahUKEwjVy4fB-OuKAxVOxzgGHW4LC7YQM3oECHwQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwjVy4fB-OuKAxVOxzgGHW4LC7YQM3oECHwQAA");
+    background-size: cover;
+    background-position: center ;
 }
 
-.search-bar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
-}
-
-.search-bar button {
-    padding: 10px;
-    font-size: 16px;
-    margin-left: 10px;
-}
-
-.hotel-list {
+.homepage-container {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    justify-content: space-between; /* Space between header, content, and footer */
+}
+
+
+/* Header styles */
+.homepage-header {
+    background-color: #228b22;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
+
+.header-title {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+
+.nav-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Section title */
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.add-section {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* Hotels list styles */
+.hotels-list {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center;
+    gap: 20px;
+
+}
+
+
+/* hotels card layout */
 .hotel-card {
-    padding: 15px;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    text-decoration: none;
-    color: black;
-    display: block;
-    text-align: center;
-    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Default card width */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px;
+    display: flex; /* Flexbox layout for side-by-side image and content */
+    flex-direction: row; /* Image on the left, content on the right */
+    transition: transform 0.3s;
 }
 
-.hotel-card h2 {
-    font-size: 18px;
-}
 
 .hotel-card:hover {
-    background-color: #efefef;
+    transform: translateY(-5px);
 }
 
-.hotel-card button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #4CAF50;
+
+/* hotel image styles */
+.hotel-image {
+    width: 200px; /* Fixed image width */
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 20px 15px;
+}
+
+
+/* hotel info (name, description, button) */
+.hotel-info {
+    padding: 15px;
+    flex: 1; /* Allow content to take up remaining space */
+}
+
+
+.hotel-title {
+    font-size: 1.2rem;
+    color: #225c8b;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+
+.hotel-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+.hotel-button {
+    display: inline-block;
+    background-color: #22438b;
     color: white;
-    border: none;
+    text-decoration: none;
+    padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
 }
 
-.hotel-card button:hover {
-    background-color: #45a049;
+
+.hotel-button:hover {
+    background-color: #335ed6ee;
+}
+/*
+.learn-more-button {
+    display: inline-block;
+    background-color: #22538b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+
+.learn-more-button:hover {
+    background-color: #337fd6;
+}
+*/
+/* Footer styles */
+.homepage-footer {
+    text-align: center;
+    background-color: #228b22;
+    color: white;
+    padding: 10px 0;
+    margin-top: auto; /* Ensure footer stays at the bottom */
+}
+
+
+/* Responsive Design for Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .hotel-card {
+        width: 100%; /* Cards take full width */
+        flex-direction: column; /* Stack image and content vertically */
+    }
+
+
+    .hotel-image {
+        width: 100%; /* Make image full width */
+        height: auto; /* Adjust height based on aspect ratio */
+        margin: 0;
+    }
+
+
+    .homepage-header {
+        flex-direction: column; /* Stack header content vertically */
+        text-align: center;
+    }
+
+
+    .nav-links {
+        display: flex;
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/* Responsive Design for Tablet (min-width: 601px and max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hotel-card {
+        width: 80%; /* Make the cards take up 80% of the width */
+        flex-direction: row; /* Keep image and content side-by-side */
+    }
+
+
+    .homepage-header {
+        flex-direction: row;
+        justify-content: space-between; /* Keep header content in row for tablets */
+    }
+
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* Responsive Design for Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .hotel-card {
+        width: 60%; /* Cards take up 60% of the width */
+    }
 }

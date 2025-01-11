@@ -28,11 +28,13 @@ h1.title {
 /* Info List Styling */
 .info-list {
     list-style-type: none;
+    margin-left: 15px;
     padding: 0;
     margin-top: 15px;
 }
 
 .info-list li {
+    color: #333;
     font-size: 18px; /* Ensure same font size for ticket info, operating hours, etc. */
     margin: 8px 0;
 }
@@ -43,6 +45,7 @@ h1.title {
 
 /* Links Styling */
 a {
+    margin-left: 15px;
     color: #007bff;
     text-decoration: none;
 }
@@ -64,7 +67,7 @@ a:hover {
 /* Fixed size for all images */
 .slider-image, .video-container {
     width: 80%; /* Limit the width to 80% of the container */
-    height: 400px; /* Set a fixed height for the images */
+    height: 350px; /* Set a fixed height for the images */
     object-fit: cover; /* Ensure the images cover the area without distortion */
     border-radius: 8px; /* Rounded corners for a softer look */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -73,24 +76,24 @@ a:hover {
 /* Styling for buttons to keep them in place and centered */
 .slider-button {
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     border: none;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px; /* Rounded corners for smoother look */
-    z-index: 1;
+    z-index: 10;
 }
 
 .slider-button:nth-of-type(1) {
-    left: 10px;
+    left: 10.5%;
 }
 
 .slider-button:nth-of-type(2) {
-    right: 10px;
+    right: 10.5%;
 }
 
 /* Responsive Media Queries */

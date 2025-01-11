@@ -15,7 +15,7 @@ function FoodPage({ items }) {
         <div className="food-page">
             {/* Header Section */}
             <header className="food-header">
-                <h1>Food & Beverage in Penang</h1>
+                <h1>Best Food & Beverage in Penang</h1>
                 <p>Discover the diverse tastes of Penang, one bite and sip at a time!</p>
             </header>
 
@@ -32,9 +32,9 @@ function FoodPage({ items }) {
             <section className="food-categories">
                 {filteredItems.map((item, index) => (
                     <article key={index} className="food-card">
-                        <img src={item.image} alt={item.name} />
+                        <img src={`${process.env.PUBLIC_URL}/${item.image}`} alt={item.name}/>
                         <div className="food-card-content">
-                            <h3>{item.name}</h3>
+                        <h3>{item.name}</h3>
                             <div className="food-card-buttons">
                                 <button
                                     className="learn-more"

@@ -3,22 +3,23 @@
     text-align: center;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffd8b1;
+    background: linear-gradient(to bottom, #f3e5ab, #80bb72);
     min-height: 100vh;/* Ensures the background covers the entire viewport height */
 }
 
 /* Header Section */
 .food-header {
     margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.47);
 }
 .food-header h1 {
+    margin-top: 5px;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 .food-header p {
     font-size: 1.2rem;
     color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 /* Filter Buttons */
@@ -33,13 +34,14 @@
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    background-color: #ffb180;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .filter-options button:hover {
-    background-color: #0056b3;
+    background-color: #d67c52;
 }
 
 /* Food Cards Section */
@@ -100,9 +102,9 @@
     transition: background-color 0.3s ease;
 }
 .food-card-buttons .learn-more {
-    background-color: #28a745;
+    background-color: #ffb180;
     color: white;
 }
 .food-card-buttons .learn-more:hover {
-    background-color: #218838;
+    background-color: #d67c52;
 }

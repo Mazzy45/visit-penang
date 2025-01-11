@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { useParams } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/autoplay";
 import { topTouristSpots } from './TouristSpotsData';
 import './DetailSpots.css';
 
 const DetailSpots = () => {
     const { id } = useParams(); // Get the id from the route
     const touristSpot = topTouristSpots.find((spot) => spot.id === id);
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const swiperRef = useRef(null); // Create a ref for Swiper
 
     if (!touristSpot) {
         return (
@@ -17,39 +21,49 @@ const DetailSpots = () => {
         );
     }
 
-    const sliderContent = touristSpot.images;  // Only images, no video
-
     const handleNextImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === sliderContent.length - 1 ? 0 : prevIndex + 1
-        );
+        if (swiperRef.current) {
+            swiperRef.current.swiper.slideNext(); // Move to the next slide
+        }
     };
 
     const handlePreviousImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? sliderContent.length - 1 : prevIndex - 1
-        );
+        if (swiperRef.current) {
+            swiperRef.current.swiper.slidePrev(); // Move to the previous slide
+        }
     };
 
     return (
         <div className="details-container">
             <h1 className="title">{touristSpot.name}</h1>
 
-            <div className="slider">
+            {/* Image Slider with Auto and Manual Slide */}
+            <section className="food-detail-slider">
                 <button onClick={handlePreviousImage} className="slider-button">
                     ◀
                 </button>
 
-                <img
-                    src={sliderContent[currentImageIndex]}
-                    alt={`Slide ${currentImageIndex + 1}`}
-                    className="slider-image"
-                />
+                <Swiper
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{ delay: 3000 }}
+                    modules={[Autoplay]}
+                    ref={swiperRef} // Assign the ref
+                >
+                    {touristSpot.images.map((imgSrc, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="slider-image">
+                                <img src={imgSrc} alt={`Slide ${index + 1}`} />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
 
                 <button onClick={handleNextImage} className="slider-button">
                     ▶
                 </button>
-            </div>
+            </section>
 
             <div className="details">
                 <p className="description">{touristSpot.longDescription.paragraph1}</p>

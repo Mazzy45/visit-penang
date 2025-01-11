@@ -6,7 +6,8 @@ import './SpotsPage.css';
 const SpotsPage = () => {
     return (
         <main>
-            <h2 className="section-title">Top 5 Tourist Attractions in Penang</h2>
+            <h2 className="section-title">Best Tourist Spots in Penang</h2>
+            <p className="add-section">Uncover the beauty of Penang, one unforgettable spot at a time.</p>
             <div className="spots-list">
                 {topTouristSpots.map((spot) => (
                     <div key={spot.id} className="spot-card">

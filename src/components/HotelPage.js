@@ -1,48 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { topHotels } from './HotelsData';
 import './HotelPage.css';
 
+
 const HotelPage = () => {
-    const [search, setSearch] = useState('');
-    const [hotels] = useState([
-        { id: 1, name: 'Sample Hotel', location: 'Sample Location' },
-        { id: 2, name: 'Luxury Hotel', location: 'Luxury Location' },
-        { id: 3, name: 'Budget Inn', location: 'Budget Location' },
-        // Add more hotels here
-    ]);
-
-    const handleSearch = () => {
-        // Implement search logic, the hotels list is already filtered on the fly
-    };
-
-    const filteredHotels = hotels.filter(hotel =>
-        hotel.name.toLowerCase().includes(search.toLowerCase()) ||
-        hotel.location.toLowerCase().includes(search.toLowerCase())
-    );
-
     return (
-        <div className="hotels-page">
-            <header className="search-bar">
-                <input
-                    type="text"
-                    placeholder="Search for hotels"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-                <button onClick={handleSearch}>Search</button>
-            </header>
-
-            <div className="hotel-list">
-                {filteredHotels.map((hotel) => (
-                    <Link to={`/details/${hotel.id}`} className="hotel-card" key={hotel.id}>
-                        <h2>{hotel.name}</h2>
-                        <p>Location: {hotel.location}</p>
-                        <button>View Details</button>
-                    </Link>
+        <main>
+            <h2 className="section-title">Best Hotels in Penang</h2>
+            <p className="add-section"> Experience the elegance of Penang’s finest hotels, your perfect getaway.</p>
+            <div className="hotels-list">
+                {topHotels.map((hotel) => (
+                    <div key={hotel.id} className="hotel-card">
+                        <img
+                            src={hotel.image}
+                            alt={hotel.name}
+                            className="hotel-image"
+                        />
+                        <div className="hotel-info">
+                            <h3 className="hotel-title">{hotel.name}</h3>
+                            <p className="hotel-description">{hotel.description}</p>
+                            <Link to={`/hotels/${hotel.id}`} className="hotel-button">
+                                Read More
+                            </Link>
+                        </div>
+                    </div>
                 ))}
             </div>
-        </div>
+        </main>
     );
 };
+
 
 export default HotelPage;

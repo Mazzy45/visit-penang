@@ -1,31 +1,96 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { topHotels } from './HotelsData';
 import './DetailHotel.css';
 
+
 const DetailHotel = () => {
-    const { hotelId } = useParams();
-    const [hotel, setHotel] = useState(null);
+    const { id } = useParams(); // Get the id from the route
+    const theHotel = topHotels.find((hotel) => hotel.id === id);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    useEffect(() => {
-        // Example API call to fetch hotel details based on hotelId
-        fetch(`https://api.example.com/hotels/${hotelId}`)
-            .then(response => response.json())
-            .then(data => setHotel(data))
-            .catch(error => console.error('Error fetching hotel data:', error));
-    }, [hotelId]);
 
-    if (!hotel) return <p>Loading...</p>;
+    if (!theHotel) {
+        return (
+            <div className="not-found">
+            <h2>Oops! Hotel not found.</h2>
+        <p>Return to the <a href="/">homepage</a> to explore other attractions.</p>
+    </div>
+    );
+    }
+
+
+    const sliderContent = theHotel.gallery;
+
+
+    const handleNextImage = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === sliderContent.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+
+    const handlePreviousImage = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? sliderContent.length - 1 : prevIndex - 1
+        );
+    };
+
 
     return (
-        <div className="details-page">
-            <h1>{hotel.name}</h1>
-            <p>Location: {hotel.location}</p>
-            <p>Price: RM {hotel.price} per night</p>
-            <p>Rating: {'⭐'.repeat(hotel.rating)}</p>
-            <p>Description: {hotel.description}</p>
-            <Link to="/">Back to Hotels</Link>
+        <div className="details-container">
+            <h1 className="title">{theHotel.name}</h1>
+
+
+            <div className="slider">
+                <button onClick={handlePreviousImage} className="slider-button prev-button">
+                    ◀
+                </button>
+
+
+                <img
+                    src={sliderContent[currentImageIndex]}
+                    alt={`Slide ${currentImageIndex + 1}`}
+                    className="slider-image"
+                />
+
+
+                <button onClick={handleNextImage} className="slider-button next-button">
+                    ▶
+                </button>
+            </div>
+
+
+            <div className="details">
+                <p className="description">{theHotel.intro}</p>
+                <p className="description">{theHotel.longDescription.paragraph1}</p>
+                <p className="description">{theHotel.longDescription.paragraph2}</p>
+                <ul className="info-list">
+                    <li><strong>Address:</strong> {theHotel.address}</li>
+                </ul>
+
+
+                {theHotel.websiteLink && (
+                    <div className="website-link">
+                        <a href={theHotel.websiteLink} target="_blank" rel="noopener noreferrer">
+                            🌐 Visit Official Website
+                        </a>
+                    </div>
+                )}
+            </div>
+
+
+            <div className="map-link">
+                <button
+                    onClick={() => window.open(theHotel.mapLink, "_blank")}
+                    className="map-link-button"
+                >
+                    🗺 View on Google Maps
+                </button>
+            </div>
         </div>
     );
 };
+
 
 export default DetailHotel;

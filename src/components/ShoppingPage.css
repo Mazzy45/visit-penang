@@ -1,5 +1,8 @@
 /* Apply Playfair Display for Headings */
+
 h1{
+    margin-top: 35px;
+    margin-bottom: 10px;
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-weight: 800;
@@ -22,6 +25,7 @@ p, .description {
 }
 
 .mall-list {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +40,7 @@ p, .description {
 }
 
 .mall-card {
-    background-color: #D7D0C7;
+    background-color: rgb(255, 255, 255);
     width: 80%;
     max-width: 600px;
     padding: 20px;
@@ -69,18 +73,6 @@ p, .description {
     align-items: center;
 }
 
-/*.image-slider::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Overlay to blur the excess area */
-/*filter: blur(2px);
-z-index: 1; /* Behind the image */
-/*}*/
-
 .image-slider img {
     width: auto;
     height: 100%;
@@ -93,13 +85,21 @@ z-index: 1; /* Behind the image */
     position: absolute;
     top: 50%;  /* Center vertically */
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent */
+    background-color: rgb(0, 0, 0);  /* Semi-transparent */
     color: white;
     border: none;
     cursor: pointer;
     font-size: 24px;
     padding: 8px 12px;
     z-index: 2;
+}
+
+.prev-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev-btn {
@@ -147,7 +147,7 @@ z-index: 1; /* Behind the image */
 
     /* Adjust text and heading sizes */
     h1, h2, h3 {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         text-align: center;
     }
 
@@ -183,4 +183,10 @@ z-index: 1; /* Behind the image */
         top: 10px;
         right: 10px;  /* Button stays at the top-right corner */
     }
+}
+
+p {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }

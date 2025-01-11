@@ -55,6 +55,7 @@ body {
 
 /* Spots list styles */
 .spots-list {
+    margin-top: 20px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap */
@@ -97,12 +98,14 @@ body {
 }
 
 .spot-title {
+    text-align: justify;
     font-size: 1.2rem;
     color: #228b22;
     margin: 10px 0;
 }
 
 .spot-description {
+    text-align: justify;
     font-size: 0.9rem;
     color: #555;
     margin-bottom: 15px;

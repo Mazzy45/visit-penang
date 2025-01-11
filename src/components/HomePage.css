@@ -131,17 +131,36 @@ iframe {
     flex-wrap: wrap;
     gap: 20px;
     padding: 40px 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(101, 200, 101, 0.79);
 }
 
 .featured-item {
-    background-color: #fff;
     padding: 30px;
     width: 250px;
+    height: 200px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    background-size: cover; /* Ensures the entire image fits within the container */
+    background-position: center center; /* Centers the image in the container */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+}
+
+.featured-item.hotels {
+    background-image: url('https://www.hotelscombined.com/news/wp-content/uploads/sites/314/2020/11/Hard-Rock-Hotel-Penang.jpg');
+}
+
+.featured-item.food {
+    background-image: url('https://girleatworld.net/wp-content/uploads/2018/12/penang-food-collage.jpg');
+}
+
+.featured-item.shopping {
+    background-image: url('https://www.kkkl.com.sg/wp-content/uploads/2024/02/A-Shopaholics-Guide-to-Penang.png');
+}
+
+.featured-item.tourist-spots {
+    background-image: url('https://penangfoodie.sgp1.digitaloceanspaces.com/2020/06/Untitled-design-5-2.png');
 }
 
 .featured-item:hover {
@@ -149,18 +168,19 @@ iframe {
 }
 
 .featured-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.featured-item p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
+    margin-left: 15px;
+    font-size: 1.7rem; /* Sets the font size */
+    margin-top: 15px; /* Adds margin above the heading */
+    margin-bottom: 15px; /* Adds margin below the heading */
+    color: #ffffff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.71); /* Transparent white background */
+    padding: 0 5px; /* Adds small padding to the left and right of the text */
+    display: inline-block; /* Ensures the background fits only around the text */
+    border-radius: 8px; /* Rounds the corners of the background */
 }
 
 .explore-btn {
+    display: inline-block;
     text-decoration: none;
     color: #fff;
     background-color: #007BFF;
@@ -207,5 +227,36 @@ button {
 button:hover {
     background-color: #FF9E00; /* Slightly darker gold */
     transform: scale(1.05);
+}
+
+/* Example for mobile-first design */
+
+/* For small screens (phones) */
+@media (max-width: 768px) {
+    .introduction {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .introduction h2 {
+        font-size: 1.5em;
+    }
+
+    .introduction p {
+        font-size: 1em;
+    }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .introduction {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .introduction p {
+        padding: 20px;
+    }
 }
 

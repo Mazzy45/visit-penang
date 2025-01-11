@@ -2,11 +2,10 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffeedf;
 }
 
 header {
-    background-color: #256940;
     padding: 15px 0;
     text-align: center;
 }
@@ -20,9 +19,10 @@ button {
 
 
 .details-btn {
-    background-color: #cda781; /*#53351C*/
+    background-color: #f9d1b3; /*#53351C*/
     color: #ffffff;
     border: none;
+    margin-bottom: 15px;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
@@ -35,7 +35,7 @@ button {
 }
 
 .details-btn:hover {
-    background-color: #53351C; /*#cda781*/
+    background-color: #f8af88; /*#cda781*/
     transform: translateY(-2px); /* Lift effect on hover */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Deeper shadow */
 }
