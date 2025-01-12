@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import './App.css'; // Import your CSS styles
 
@@ -14,18 +14,21 @@ import DetailShopping from './components/DetailShopping';  // Shopping detail pa
 import DetailSpots from './components/DetailSpots';  // Tourist Spots detail page
 import foodData from './components/FoodData';
 
-// ScrollToTop Component
 function ScrollToTop() {
   const { pathname } = useLocation();
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 }
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
       <Router>
         <ScrollToTop />
@@ -36,7 +39,12 @@ function App() {
               <div className="logo">
                 <img src={`${process.env.PUBLIC_URL}/logo-visit-penang.png`} alt="Visit Penang Logo" />
               </div>
-              <ul className="nav-links">
+              <div className="hamburger" onClick={toggleMenu}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+              <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/hotels">Hotels</Link></li>
                 <li><Link to="/food">Food</Link></li>

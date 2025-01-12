@@ -1,6 +1,6 @@
 /* App.css */
 
-/* Reset default styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header (Navigation Bar) */
+/* Header Styling */
 .navbar {
   background: linear-gradient(to bottom, #A8E6CF, #F3E5AB);
   color: #000000;
@@ -32,12 +32,12 @@ body {
   margin-right: 40%;
 }
 
-/* Logo container */
 .navbar .logo img {
-  width: 150px; /* Adjust the width as needed */
+  width: 150px;
   height: auto;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -48,157 +48,64 @@ body {
 }
 
 .nav-links li a {
-  color: black; /* Black text color for the links */
-  text-decoration: none; /* Remove underline from links */
-  display: inline-block;
-  text-align: center; /* Centers text if wrapped */
-  white-space: normal; /* Allows text wrapping */
-  line-height: 1.5;    /* Adjusts spacing between lines */
+  color: black;
+  text-decoration: none;
 }
 
 .nav-links li a:hover {
-  color: gray; /* Change color on hover for better visual effect */
+  color: gray;
 }
 
-/* Main Content Area */
-main {
-  padding: 20px;
-}
-
-/* Footer Container */
-footer {
-  background: linear-gradient(to bottom, #80bb72, #f3e5ab);
-  color: #000000;
-  padding: 5px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* Layout for the left and right sections */
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 2rem;
-  margin-bottom: 5px;
-}
-
-.footer-left,
-.footer-right {
-  margin-left: 60px;
-  flex: 1; /* Equal width for both sections */
-  max-width: 500px;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.footer-left {
-  color: #fff; /* Text color */
-  padding: 20px; /* Add some padding for spacing */
-  border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-.footer-right {
-  color: #000000; /* Text color */
-  padding: 20px; /* Add some padding for spacing */
-  border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-.footer-left h4,
-.footer-right h4 {
-  color: #000000; /* Heading color for both sections */
-  text-align: justify;
-}
-
-.footer-left p,
-.footer-right p {
-  font-size: 14px;
-  text-align: justify;
-  color: #000000; /* Heading color for both sections */
-}
-
-.footer-right a {
-  color: #000000; /* Link color for email */
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.footer-right a:hover {
-  color: #000000; /* Change color on hover for better interactivity */
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px 0; /* Add padding to the copyright section */
-  font-size: 10px;
-  border-radius: 5px; /* Optional: Add rounded corners */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.08); /* Optional: Add a subtle shadow for depth */
-}
-
-.footer-bottom p {
-  font-size: 15px;
-  color: #000000; /* Heading color for both sections */
-}
-
-.footer-logo {
-  width: 80px; /* Adjust the logo size as needed */
-  height: auto;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%; /* Add some space between the logo and text */
-}
-
-/* Responsive Design */
+/* Mobile Specific */
 @media (max-width: 768px) {
-  .nav-links {
+  /* Show the hamburger menu */
+  .hamburger {
     display: block;
-    text-align: center;
-    align-items: center;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .footer-container {
+    cursor: pointer;
     flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
   }
 
-  .footer-left,
-  .footer-right {
-    margin-left: 0;
-    padding: 10px;
-    max-width: 100%;
+  .bar {
+    width: 100%;
+    height: 4px;
+    background-color: black;
   }
 
-  .footer-logo {
-    margin: 0 auto 1rem;
+  /* Hide nav links initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Adjust navbar styling on mobile */
+  .navbar nav {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .navbar .logo {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 480px) {
+  /* For small screens, adjust navbar padding */
   .navbar {
     padding: 0.5rem;
   }
 
   .nav-links a {
     font-size: 14px;
-  }
-
-  .footer-left,
-  .footer-right {
-    padding: 10px;
-  }
-
-  .footer-logo {
-    width: 60px;
   }
 }
