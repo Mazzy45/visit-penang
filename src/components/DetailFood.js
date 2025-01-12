@@ -5,7 +5,6 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import './DetailFood.css';
-import foodData from "./FoodData";
 
 function DetailFood({ items }) {
     const { name } = useParams();
@@ -32,7 +31,7 @@ function DetailFood({ items }) {
                     {food.images.map((imgSrc, index) => (
                         <SwiperSlide key={index}>
                             <div className="slider-image">
-                                <img src={`${process.env.PUBLIC_URL}/images/${foodData}`} alt={`Slide ${index + 1}`}/>
+                                <img src={`${process.env.PUBLIC_URL}/images/${imgSrc}`} alt={`Slide ${index + 1}`}/>
                             </div>
                         </SwiperSlide>
                     ))}

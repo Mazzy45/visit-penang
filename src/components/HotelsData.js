@@ -57,7 +57,7 @@ export const topHotels = [
             "https://cf.bstatic.com/xdata/images/hotel/max300/348172046.jpg?k=0e72510a78aeff1c38239fd18560076fda66c3b650ce933d95fa54b65ccbe209&o=",
             "https://cf.bstatic.com/xdata/images/hotel/max300/541826886.jpg?k=f56d26ab8f4590a8973c157fc8256d3289f98cb58021463aebe80cc3e297916d&o="
         ],
-        description: "Situated in George Town, 2.8 km from Northam Beach, SAVV HOTEL features accommodation with an outdoor swimming pool, free private parking, a garden and a shared lounge.",
+        description: "Situated in George Town, 1.4 km from Northam Beach, Eastern & Oriental Hotel features accommodation with an outdoor swimming pool, free private parking, a fitness centre and a garden.",
         address: "10 Farquhar Street, 10200 George Town, Pulau Pinang",
         intro: "Located in George Town, Eastern & Oriental Hotel is 1 km from Northam Beach, and it has an outdoor swimming pool, free private parking, a fitness center, and a garden. Facilities in this property include a restaurant, room service, and a 24-hour front desk, with free WiFi throughout the facility. concierge service, tour desk, and currency exchange are some of the services available to the guests who stay here.",
         longDescription: {
