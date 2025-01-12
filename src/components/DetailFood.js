@@ -8,8 +8,11 @@ import './DetailFood.css';
 
 function DetailFood({ items }) {
     const { name } = useParams();
+    console.log("Food name from URL:", name);
     const navigate = useNavigate();
     const food = items.find((item) => item.name === name);
+    console.log("Food data passed to DetailFood:", items);
+    console.log("Found food item:", food);
 
 
     if (!food) {
