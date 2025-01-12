@@ -155,7 +155,7 @@ button {
 }
 
 /* For mobile screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     /* Adjust the layout for mobile screens */
     .container {
         width: 100%;
@@ -163,12 +163,10 @@ button {
     }
 
     .details-btn {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 16px; /* Smaller padding for better fit */
-        position: absolute;  /* Adjust button positioning */
-        top: 10px;
-        right: 10px;  /* Align to top-right */
-        z-index: 10000;  /* Ensure it's above content */
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 6px 12px; /* Smaller padding for better fit */
+        bottom: 5px;
+        right: 5px;/* Ensure it's above content */
     }
 
     /* Adjust modal content and overlay for mobile */
@@ -207,3 +205,4 @@ button {
         color: white;
     }
 }
+
