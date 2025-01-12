@@ -40,6 +40,7 @@ p, .description {
 }
 
 .mall-card {
+    position: relative;
     background-color: rgb(255, 255, 255);
     width: 80%;
     max-width: 600px;
@@ -48,6 +49,21 @@ p, .description {
     border-radius: 10px;
     margin: 10px;
     text-align: justify;
+}
+
+/* Button styling */
+.details-btn {
+    font-size: 14px; /* Smaller font size for mobile */
+    padding: 8px 16px; /* Adjust padding */
+    background-color: #f1f1f1;  /* Optional background */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;  /* Absolute positioning inside the card */
+    bottom: 10px;        /* Align the button to the bottom of the card */
+    right: 10px;         /* Align to the right of the card */
+    z-index: 1;          /* Ensure it stays above other content */
 }
 
 .mall-card h2 {
@@ -130,19 +146,33 @@ p, .description {
     }
 
     .mall-list {
-        flex-direction: column;  /* Stack items vertically */
+        flex-direction: column; /* Stack items vertically */
         padding: 10px;
     }
 
     .mall-item {
-        width: 100%;  /* Make sure each item takes full width */
-        max-width: none;  /* Remove max-width restriction for smaller devices */
+        width: 100%; /* Make sure each item takes full width */
+        max-width: none; /* Remove max-width restriction for smaller devices */
     }
 
     .mall-card {
-        width: 100%;  /* Make cards take full width in mobile */
-        margin: 5px;
-        padding: 10px;
+        width: 100%;  /* Full width for the card */
+        padding: 15px;  /* Adjust padding */
+        display: flex;
+        flex-direction: column;  /* Stack content vertically */
+        position: relative;  /* Ensure button stays inside the card */
+    }
+
+    .mall-card img {
+        width: 100%; /* Ensure image fits within the card */
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px; /* Space between image and description */
+    }
+
+    /* Ensures card content doesn't overflow */
+    .mall-card > * {
+        margin-bottom: 10px;
     }
 
     /* Adjust text and heading sizes */
@@ -156,13 +186,14 @@ p, .description {
     }
 
     .description {
+        margin-bottom: 15px;
         font-size: 14px;
     }
 
     /* Style adjustments for image slider */
     .image-slider {
-        width: 100%;  /* Full width for the image slider */
-        height: 250px;  /* Adjust height to fit better */
+        width: 100%; /* Full width for the image slider */
+        height: 250px; /* Adjust height to fit better */
     }
 
     .image-slider img {
@@ -176,12 +207,19 @@ p, .description {
         padding: 5px 8px;
     }
 
+    /* Ensure button is positioned at the bottom-right */
     .details-btn {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 16px; /* Smaller padding for better fit */
-        position: absolute;  /* Ensure button stays inside the card */
-        top: 10px;
-        right: 10px;  /* Button stays at the top-right corner */
+        font-size: 12px;  /* Adjust font size for small button */
+        padding: 6px 12px;  /* Small padding */
+        background-color: #f1f1f1;
+        color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;  /* Position at the bottom */
+        right: 10px;   /* Align to the right */
+        margin-top: auto; /* Push the button down after content */
     }
 }
 

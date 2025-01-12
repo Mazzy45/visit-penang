@@ -9,7 +9,20 @@ function DetailShopping({ mall, onClose }) {
                 <h2>{mall.name}</h2>
                 <p><strong>Operating Hours:</strong> {mall.hours}</p>
                 <p><strong>Address:</strong> {mall.address}</p>
-
+                {/* Add mall website link */}
+                {mall.website && (
+                    <p>
+                        <strong>Mall Website:</strong>{''}
+                        <a
+                            href={mall.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mall-website-link"
+                        >
+                            Visit Official Website
+                        </a>
+                    </p>
+                )}
                 <h3>Gallery</h3>
                 <div className="gallery">
                     {mall.gallery && mall.gallery.length > 0 ? (

@@ -70,10 +70,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .food-detail-card h3 {
+    text-align: justify;
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
 .food-detail-card p {
+    text-align: justify;
     margin-bottom: 15px;
     color: #5a4033;
     line-height: 1.6;

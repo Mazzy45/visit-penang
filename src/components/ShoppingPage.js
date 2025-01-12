@@ -14,6 +14,7 @@ const malls = [
         description: "Located along the famous Gurney Drive, Gurney Plaza is one of Penang’s premier shopping destinations. Opened in 2001, this 9-story mall boasts over 380 stores, ranging from luxury brands to popular international retailers. Visitors can shop at H&M, Marks & Spencer, and Coach, or unwind at the top-floor cinema. The mall is also known for its diverse dining options, with a mix of local delights and international cuisines.",
         hours: "10 AM - 10 PM",
         address: "170, Gurney Dr, Pulau Tikus, 10250 George Town, Penang",
+        website: 'https://gurneyplaza.com.my/',
         gallery: [
             "https://gurneyplaza.com.my/wp-content/uploads/sites/2/2024/11/B1-1-1024x576.jpg",
             "https://gurneyplaza.com.my/wp-content/uploads/sites/2/2024/11/GF-1024x576.jpg",
@@ -37,6 +38,7 @@ const malls = [
         description: "As the largest mall in Penang, Queensbay Mall is a vibrant shopping haven located near the scenic waterfront of Bayan Lepas. Opened in 2006, it features over 500 retail outlets, including Zara, Adidas, and Uniqlo. Families can enjoy a variety of entertainment options, from arcades to a spacious cinema. The mall’s waterfront location offers stunning sunset views, making it a perfect place to shop and relax by the sea.",
         hours: "10:30 AM - 10:30 PM",
         address: "100, Persiaran Bayan Indah, 11900 Bayan Lepas, Penang",
+        website: 'https://www.queensbaymallmalaysia.com/',
         gallery: [
             "https://www.queensbaymallmalaysia.com/queensbay/assets/img/page/zoneplan-lg.png",
             "https://www.queensbaymallmalaysia.com/queensbay/assets/img/page/zoneplan-gf.png",
@@ -56,6 +58,7 @@ const malls = [
         description: "Living up to its name, Gurney Paragon Mall is nestled in Gurney Drive, serving as one of the high-end malls in Penang. Opened in 2013, this mall features over 380 stores, combining luxury shopping, fine dining, and entertainment. Visitors can browse brands like Tory Burch and Michael Kors or watch the latest blockbusters at the cinema. The mall’s open-air design and seafront views make for a unique shopping experience.",
         hours: "10 AM - 10 PM",
         address: "163d, Gurney Dr, 10250 George Town, Penang",
+        website: 'https://www.gurneyparagon.com/',
         gallery: [
             "https://www.gurneyparagon.com/images/tenants/Jaya-Grocer23.jpg",
             "https://www.gurneyparagon.com/images/tenants/20240919/michaelkors.jpg",
@@ -78,6 +81,7 @@ const malls = [
         description: "Located in Georgetown, 1st Avenue Mall offers a modern and urban shopping experience. Since its opening in 2010, the mall has attracted visitors with trendy fashion stores, local boutiques, and a rooftop cinema offering panoramic views of the city. With a mix of lifestyle brands and dining spots, it’s a go-to for both locals and tourists seeking entertainment in the heart of the city.",
         hours: "10 AM - 10 PM",
         address: "182, Jalan Magazine, 10300 George Town, Pulau Pinang",
+        website: 'https://www.1st-avenuepenang.com.my/',
         gallery: [
             "https://www.1st-avenuepenang.com.my/wp-content/uploads/2024/07/2023-version_LG-Floor-Model_Ai-Cha-scaled.jpg",
             "https://www.1st-avenuepenang.com.my/wp-content/uploads/2024/09/2023-version_G-Floor-Model_Lovisa-scaled.jpg",
@@ -99,6 +103,7 @@ const malls = [
         description: "Sunway Carnival Mall, located in Seberang Perai, is one of the mainland’s most popular retail spots. Opened in 2007, the mall features a mix of local and international stores, alongside family entertainment facilities. The mall’s expansion has introduced more dining options and larger event spaces, making it a lively community hub.",
         hours: "10 AM - 10 PM",
         address: "3068, Jalan Todak Pusat Bandar Seberang Jaya, Seberang Jaya, 13700 Perai, Pulau Pinang",
+        website: 'https://www.sunwaycarnival.com/',
         gallery: [
             "https://www.sunwaycarnival.com/static/shops/d3a7c0ec346ea8c3aad63bf683bc2941/w768.jpg",
             "https://www.sunwaycarnival.com/static/shops/9bbd24bf02e3636ab9d49409c136c82f/w768.jpeg",
