@@ -5,14 +5,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import './DetailFood.css';
+import foodData from "./FoodData";
 
 function DetailFood({ items }) {
     const { name } = useParams();
-    console.log("Food name from URL:", name);
     const navigate = useNavigate();
     const food = items.find((item) => item.name === name);
-    console.log("Food data passed to DetailFood:", items);
-    console.log("Found food item:", food);
 
 
     if (!food) {
@@ -34,7 +32,7 @@ function DetailFood({ items }) {
                     {food.images.map((imgSrc, index) => (
                         <SwiperSlide key={index}>
                             <div className="slider-image">
-                                <img src={`${process.env.PUBLIC_URL}/images/${imgSrc}`} alt={`Slide ${index + 1}`}/>
+                                <img src={`${process.env.PUBLIC_URL}/images/${foodData}`} alt={`Slide ${index + 1}`}/>
                             </div>
                         </SwiperSlide>
                     ))}
