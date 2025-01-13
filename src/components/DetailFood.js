@@ -31,7 +31,7 @@ function DetailFood({ items }) {
                     {food.images.map((imgSrc, index) => (
                         <SwiperSlide key={index}>
                             <div className="slider-image">
-                                <img src={`${process.env.PUBLIC_URL}/images/${imgSrc}`} alt={`Slide ${index + 1}`}/>
+                                <img src={`${process.env.PUBLIC_URL}/${imgSrc}`} alt={`Slide ${index + 1}`}/>
                             </div>
                         </SwiperSlide>
                     ))}

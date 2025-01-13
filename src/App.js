@@ -23,11 +23,25 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setMenuOpen(!menuOpen);
   };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  React.useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!event.target.closest('.hamburger') && !event.target.closest('.nav-links')) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, []);
 
   return (
       <Router>
@@ -39,17 +53,17 @@ function App() {
               <div className="logo">
                 <img src={`${process.env.PUBLIC_URL}/logo-visit-penang.png`} alt="Visit Penang Logo" />
               </div>
-              <div className="hamburger" onClick={toggleMenu}>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
+              <div className={`hamburger ${menuOpen ? 'open' : ''}`} aria-expanded={menuOpen} onClick={toggleMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/hotels">Hotels</Link></li>
-                <li><Link to="/food">Food</Link></li>
-                <li><Link to="/shopping">Shopping</Link></li>
-                <li><Link to="/tourist-spots">Tourist Spots</Link></li>
+              <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+                <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                <li><Link to="/hotels" onClick={closeMenu}>Hotels</Link></li>
+                <li><Link to="/food" onClick={closeMenu}>Food</Link></li>
+                <li><Link to="/shopping" onClick={closeMenu}>Shopping</Link></li>
+                <li><Link to="/tourist-spots" onClick={closeMenu}>Tourist Spots</Link></li>
               </ul>
             </nav>
           </header>
